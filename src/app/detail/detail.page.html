@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Company Name</ion-label>
+    <ion-input type="text" [(ngModel)]="food.companyName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Food Menu</ion-label>
+    <ion-input type="text" [(ngModel)]="food.foodMenu"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Food</ion-label>
+    <ion-input type="text" [(ngModel)]="food.food"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="food.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Details</ion-label>
+    <ion-input type="text" [(ngModel)]="food.details"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Price</ion-label>
+    <ion-input type="number" [(ngModel)]="food.price"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Image</ion-label>
+    <ion-button (click)="getImage()">
+      Image Upload
+    </ion-button>
+  </ion-item>
+  <ion-button expand="block" color="danger" (click)="update()">
+    Update
+  </ion-button>
+
+  <ion-button expand="block" color="danger" (click)="delete(food.id)">
+    Delete
+  </ion-button>
+</ion-content>

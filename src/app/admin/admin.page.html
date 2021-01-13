@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Admin Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <section class="ion-text-center ion-margin-bottom">
+
+    <h1 style="font-size:1.4em" no-margin>Welcome<br></h1>
+  </section>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="ion-text-center ion-padding" (click)="addFoodMenu();" color="primary">
+          <ion-icon name="person"></ion-icon>
+          <h2>Add Menu</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card class="ion-text-center ion-padding" (click)="editFoodMenu();" color="primary">
+          <ion-icon name="people"></ion-icon>
+          <h2>Edit Menu</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="ion-text-center ion-padding"  color="primary">
+          <ion-icon name="settings"></ion-icon>
+          <h2>Filler 0</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card class="ion-text-center ion-padding"  color="primary">
+          <ion-icon name="list"></ion-icon>
+          <h2>Filler 1</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card class="ion-text-center ion-padding"  color="primary">
+          <ion-icon name="add"></ion-icon>
+          <h2>Filler 2</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+          <ion-card class="ion-text-center ion-padding"  color="primary">
+            <ion-icon name="calendar"></ion-icon>
+            <h2>Filler 3</h2>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

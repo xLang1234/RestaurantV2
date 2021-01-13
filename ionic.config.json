@@ -1,0 +1,7 @@
+{
+  "name": "rsapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

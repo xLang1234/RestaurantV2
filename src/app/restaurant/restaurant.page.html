@@ -1,0 +1,248 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="valtxte == 1 ">McDonald's - Menu</ion-title>
+    <ion-title *ngIf="valtxte == 2 ">Domino's Pizza - Menu</ion-title>
+    <ion-title *ngIf="valtxte == 3 ">Café Coffee Day - Menu</ion-title>
+    <ion-title *ngIf="valtxte == 4 ">Starbucks - Menu</ion-title>
+    <ion-title *ngIf="valtxte == 5 ">KFC - Menu</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCart()" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-item-sliding  *ngIf="valtxte == 1 ">
+    <ion-item class="no-padding">
+      <ion-label>
+        <h2>McDonald's</h2>
+      </ion-label>
+      <p>Welcome to our new Family Fun Hub! Discover hours of creative activities for your kids and make lasting memories for their next birthday!</p>
+    </ion-item>
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://images.mcdelivery.co.in/hardcastle-restaurants-pvt-ltd/image/upload/f_auto,q_auto,w_250/v1593066981/Item/4906.png"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Schzewan Aloo Burger</h2>
+        <p>A crispy aloo patty fried to perfection, drizzled with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 1, name: 'Schzewan Aloo Burger', price: 8.99, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://images.mcdelivery.co.in/hardcastle-restaurants-pvt-ltd/image/upload/f_auto,q_auto,w_750/v1593066974/Item/4899.png"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Schezwan Aloo Meal (R)</h2>
+        <p>Enjoy the new Schezwan Aloo Burger + Fries (S) + Drink of your choice (S). </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 2, name: 'Schezwan Aloo Meal (R)', price: 5.49, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://images.mcdelivery.co.in/hardcastle-restaurants-pvt-ltd/image/upload/f_auto,q_auto,w_250/v1593066979/Item/4907.png"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Grilled Schezwan Chicken Burger</h2>
+        <p>A delicious chicken patty grilled to perfection, topped with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 3, name: 'Grilled Schezwan Chicken Burger', price: 4.99, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+   
+  </ion-item-sliding>
+
+  <ion-item-sliding  *ngIf="valtxte == 2 ">
+    <ion-item class="no-padding">
+      <ion-label>
+        <h2>Domino's Pizza</h2>
+      </ion-label>
+      <p>Domino's Pizza, Inc., branded as Domino's, is an American multinational pizza restaurant chain founded in 1960. </p>
+    </ion-item>
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://images.dominos.co.in/new_margherita_2502.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Margherita</h2>
+        <p>A crispy aloo patty fried to perfection, drizzled with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://images.dominos.co.in/new_veggie_paradise.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Veggie Paradise</h2>
+        <p>Enjoy the new Schezwan Aloo Burger + Fries (S) + Drink of your choice (S). </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://images.dominos.co.in/new_veg_extravaganza.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Veg Extravaganza</h2>
+        <p>A delicious chicken patty grilled to perfection, topped with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+    </ion-item>
+  </ion-item-sliding>
+
+  <ion-item-sliding  *ngIf="valtxte == 3 ">
+    <ion-item class="no-padding">
+      <ion-label>
+        <h2>Café Coffee Day</h2>
+      </ion-label>
+      <p>Café Coffee Day is an Indian café chain. It is a subsidiary of Coffee Day Enterprises Limited. Coffee Day serves 1.6 billion cups of coffee annually in six countries.</p>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://s3-ap-southeast-1.amazonaws.com/giantlabsshouut/shouutmedia/isp/foodiq/original/O335.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>SMOKED CHICKEN CHIPOTLE SANDWICH </h2>
+        <p>A crispy aloo patty fried to perfection, drizzled with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://s3-ap-southeast-1.amazonaws.com/giantlabsshouut/shouutmedia/isp/foodiq/original/M384.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>VEG SAMOSA</h2>
+        <p>Enjoy the new Schezwan Aloo Burger + Fries (S) + Drink of your choice (S). </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://s3-ap-southeast-1.amazonaws.com/giantlabsshouut/shouutmedia/isp/foodiq/original/G720.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>CAFÉ FRAPPE</h2>
+        <p>A delicious chicken patty grilled to perfection, topped with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 0, name: 'Pizza Salami', price: 8.99, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+  </ion-item-sliding>
+
+  <ion-item-sliding  *ngIf="valtxte == 4 ">
+    <ion-item class="no-padding">
+      <ion-label>
+        <h2>Starbucks</h2>
+      </ion-label>
+      <p>Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington.</p>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://www.starbucks.in/media/Dutch_Truffle_Gateau_tcm87-63371_w1024_n.png"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Dutch Truffle Gateau</h2>
+        <p>A crispy aloo patty fried to perfection, drizzled with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://www.starbucks.in/media/Paneer_Makhani_Comfort_Bowl_tcm87-63693_w1024_n.png"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Paneer Makhani Comfort Bowl</h2>
+        <p>Enjoy the new Schezwan Aloo Burger + Fries (S) + Drink of your choice (S). </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 11, name: 'Paneer Makhani Comfort Bowl', price: 5.49, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://www.starbucks.in/media/Red_Velvet_and_Orange_Cake_tcm87-63372_w1024_n.png"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Red Velvet and Orange Cake</h2>
+        <p>A delicious chicken patty grilled to perfection, topped with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 12, name: 'Red Velvet and Orange Cake', price: 4.99, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+  </ion-item-sliding>
+
+  <ion-item-sliding  *ngIf="valtxte == 5 ">
+    <ion-item class="no-padding">
+      <ion-label>
+        <h2>KFC</h2>
+      </ion-label>
+      <p>Order online the best fried chicken from world’s most popular chicken restaurant. KFC is an American fast food restaurant chain that specializes in fried chicken. Exclusives for Family. </p>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://online.kfc.co.in/Content/OnlineOrderingImages/Menu/Items/CAT116-6181.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>5 pc Leg Piece Bucket & 2 Dips</h2>
+        <p>A crispy aloo patty fried to perfection, drizzled with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 13, name: '5 pc Leg Piece Bucket & 2 Dips', price: 8.99, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://online.kfc.co.in/Content/OnlineOrderingImages/Menu/Items/CAT116-6385.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Big 8</h2>
+        <p>Enjoy the new Schezwan Aloo Burger + Fries (S) + Drink of your choice (S). </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 14, name: 'Big 8', price: 5.49, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="no-padding">
+      <ion-thumbnail slot="start">
+        <ion-img [src]='"https://online.kfc.co.in/Content/OnlineOrderingImages/Menu/Items/CAT117-5510.jpg"'></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>5 in 1 Classic Zinger Meal</h2>
+        <p>A delicious chicken patty grilled to perfection, topped with shredded onions and a tangy, spicy schezwan sauce- between two, lightly toasted buns. </p>
+      </ion-label>
+      <ion-button fill="clear" (click)="addToCart({ id: 15, name: '5 in 1 Classic Zinger Meal', price: 4.99, amount: 0 })">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-item-sliding>
+
+
+
+  
+</ion-content>

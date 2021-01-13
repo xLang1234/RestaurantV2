@@ -1,0 +1,136 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Restaurants
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="none">
+    
+    <ion-item-options side="start">
+      <ion-item-option>
+        <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+
+    <ion-item-sliding [routerLink]="['/restaurant/1']">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2>McDonald's</h2>
+          <p>Welcome to our new Family Fun Hub! Discover hours of creative activities for your kids and make lasting memories for their next birthday!</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+    <ion-item-sliding [routerLink]="['/restaurant/2']">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2>Domino's Pizza</h2>
+          <p>Domino's Pizza, Inc., branded as Domino's, is an American multinational pizza restaurant chain founded in 1960. </p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+
+    <ion-item-sliding [routerLink]="['/restaurant/3']">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2>Café Coffee Day</h2>
+          <p>Café Coffee Day is an Indian café chain. It is a subsidiary of Coffee Day Enterprises Limited. Coffee Day serves 1.6 billion cups of coffee annually in six countries.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+
+
+    <ion-item-sliding [routerLink]="['/restaurant/4']">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2>Starbucks</h2>
+          <p>Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves headquartered in Seattle, Washington.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+
+    <ion-item-sliding [routerLink]="['/restaurant/5']">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2>KFC</h2>
+          <p>Order online the best fried chicken from world’s most popular chicken restaurant. KFC is an American fast food restaurant chain that specializes in fried chicken. Exclusives for Family. </p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

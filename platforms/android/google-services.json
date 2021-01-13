@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "429714469353",
+    "firebase_url": "https://databaseapp1-35551.firebaseio.com",
+    "project_id": "databaseapp1-35551",
+    "storage_bucket": "databaseapp1-35551.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429714469353:android:555c0e04bf31f9fe",
+        "android_client_info": {
+          "package_name": "sg.edu.tp.databaseapp1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429714469353-oomu3sfrm6uohebq5gsji2vmcdb8b8go.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sg.edu.tp.databaseapp1",
+            "certificate_hash": "173f781cf6d262a0a71223a99af33d5be0ab8536"
+          }
+        },
+        {
+          "client_id": "429714469353-ul7ssqoadnru684g09kivu1ebh5qmlas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAheJTuWdLpsxpamSaw37fHqLwrK0g2bC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429714469353-ul7ssqoadnru684g09kivu1ebh5qmlas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

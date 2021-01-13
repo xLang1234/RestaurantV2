@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>addFood</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <ion-item>
+      <ion-label>Company Name</ion-label>
+      <ion-input type="text" [(ngModel)]="data.companyName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Food Menu</ion-label>
+      <ion-input type="text" [(ngModel)]="data.foodMenu"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Food</ion-label>
+      <ion-input type="text" [(ngModel)]="data.food"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="data.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Details</ion-label>
+      <ion-input type="text" [(ngModel)]="data.details"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Price</ion-label>
+      <ion-input type="number" [(ngModel)]="data.price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Image</ion-label>
+      <ion-button (click)="getImage()">
+        Image Upload
+      </ion-button>
+    </ion-item>
+    
+    <img [src]="imageSrc">
+    <img [src]="imageJpeg">
+
+    <ion-button type="submit" (click)="addFoodMenu()">
+      Add Food Item
+    </ion-button>
+
+</ion-content>
